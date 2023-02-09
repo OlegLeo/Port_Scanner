@@ -53,7 +53,7 @@ if [[ $host == *"*"* ]]; then
     done
 
     # Substitute the iterated octet with all possible values (0-255)
-    for i in $(seq 1 2); do
+    for i in $(seq 0 255); do
         host="$base$i"
         echo "Looking for open ports on: $host"
         # Looking for most known open ports if there were no ports specified by user 
